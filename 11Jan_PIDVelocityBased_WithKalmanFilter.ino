@@ -84,12 +84,12 @@ void loop() {
   Xt = Xt_update + (Kt * (v1Filt - Xt_update));
   Pt = (1 - Kt) * Pt_update;
   Xt_prev = Xt;
-  Pt_prev = Xt;
+  Pt_prev = Pt;
   KalmanFilterData = Xt;
 
   // Set a target
-  float vt = -100;
-  // float vt = 100*(sin(prevT/1e6));
+  // float vt = -100;
+  float vt = 100*(sin(prevT/1e6) > 0 );
 
   // Compute the control signal u
   //DEFINE PID

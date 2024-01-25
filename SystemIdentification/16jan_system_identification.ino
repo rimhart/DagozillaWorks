@@ -128,13 +128,13 @@ void loop() {
 
   Serial.print(v1Prev);
   Serial.print(" ");
-  Serial.print(deltaT);
+  Serial.print(0.5 * deltaT);
   Serial.print(" ");
   // Serial.print(e);
   // Serial.print(" ");
   // Serial.print(pwr);
   Serial.println();
-  delay(2 * deltaT);
+  delay(0.5 * deltaT);
 }
 
 void setMotor(int dir, int pwmVal){
